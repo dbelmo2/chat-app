@@ -14,7 +14,7 @@ function Home() {
                     <Link to="/SignUp">
                         <button class="ripple"> Sign Up </button>
                     </Link>
-                    <Link to="LogIn">
+                    <Link to="/LogIn">
                         <button class="ripple"> Log In </button>
                     </Link>
                 </div>

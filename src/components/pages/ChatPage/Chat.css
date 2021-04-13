@@ -1,0 +1,105 @@
+.Chat--container {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+.Chat--navbar {
+    padding: 5px 0px;
+    display: flex;
+    flex-direction: row;
+    width: 100vh;
+    justify-content: space-around;
+    align-items: center;
+}
+.Chat--header {
+    font-family: 'Caveat', cursive;
+    color: white;
+    font-size: 4vh;
+
+}
+.Chat--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100vh;
+    overflow-y: scroll;
+    padding: 10px 5px;
+    border-top-style: solid;
+    border-top-color: #484848;
+    border-top-width: 1px;
+    border-radius: 10px;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.Chat--wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+.Chat--input-wrapper {
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.Chat--message-input {
+    width: 75vh;
+    height: 45px;
+    margin-right: 5px;
+    border-radius: 30px;
+    border-style: none;
+    padding: 5px 15px;
+
+}
+
+.send-button {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background-color: #242424;
+}
+.Chat--message-wrapper {
+    padding: 5px 15px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin:3px 0px;
+}
+.Chat--message-bubble {
+    background-color: cornflowerblue;
+    border-radius: 15px;
+    padding: 10px 18px;
+    display: flex;
+    justify-content: flex-start;
+}
+.Chat--message {
+    color: white;
+}
+.Chat--sender-name {
+    color: white;
+    font-size: x-small;
+}
+.signout {
+    width: auto;
+    padding:0px 20px;
+}
+
+@media screen and (max-width: 100vh) {
+    .Chat--wrapper {
+        width: 90vw;
+    }
+    .Chat--input-wrapper {
+        width: 90vw;
+    }
+    .Chat--message-input {
+        width: 70vw;
+    }
+    .Chat--navbar {
+        width: 90vw;
+    }
+}

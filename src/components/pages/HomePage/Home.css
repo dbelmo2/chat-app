@@ -1,0 +1,60 @@
+.home--container {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.home--wrapper {
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+    width: 95vw;
+}
+
+.header--wrapper {
+}
+
+.header--style {
+    color: white;
+    font-size: 12.5vh;
+    font-family: 'Caveat', cursive;
+}
+.buttons--wrapper {
+    margin-top: 10vh;
+    height: 10vh;
+    width: 45vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+button {
+    width: 20vh;
+    background-color: red;
+    align-self: center;
+    height: 5vh;
+    border-radius: 8px;
+    border-style: none;
+    background-color: #bb86fc;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: #3700b3 radial-gradient(circle, transparent 1%, #bb86fc 1%) center/15000%;
+}
+.ripple:active {
+  background-color: #bb86fc;
+  background-size: 100%;
+  transition: background 0s;
+}

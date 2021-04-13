@@ -1,0 +1,165 @@
+.page--container {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.page--wrapper {
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+    width: 95vw;
+}
+
+.form--pane {
+    height: 50vh;
+    width: 45vh;
+    display: flex;
+    background-color: #242424;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form--error {
+    color: red;
+    margin-bottom: 2vh;
+}
+
+.form--style {
+    display: flex;
+    flex-direction: column;
+    width: 40vh;
+    align-self: center;
+    padding: 10px 10px;
+    margin-bottom: 5vh;
+    
+}
+
+.email--input-style {
+    height: 4.5vh;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-style: none;
+
+}
+.password--input-style {
+    height: 4.5vh;
+    padding: 5px 10px;
+    margin-bottom: 45px;
+    border-radius: 8px;
+    border-style: none;
+    
+}
+.form--header-wrapper {
+    background-color: #18191a;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: auto;
+    height: 10vh;
+}
+.form--header {
+    color: white;
+    font-size: 7vh;
+    font-family: 'Caveat', cursive;
+
+}
+
+.form--bottom-wrapper{
+    padding: 10px 0px;
+    width: 45vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-self: center
+}
+
+.form--bottom-text-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 45vh;
+    padding: 5px 0px;
+}
+.form--bottom-text {
+    color: white;
+    margin-right: 3px;
+}
+.form--bottom-text-link {
+    text-decoration: none;
+    color: #bb86fc;
+    margin-left: 3px;
+}
+
+
+button {
+    width: 20vh;
+    background-color: red;
+    align-self: center;
+    height: 5vh;
+    border-radius: 8px;
+    border-style: none;
+    background-color: #bb86fc;
+    color: white;
+    font-weight: bold;
+}
+
+.g {
+    background-color: #4081ec;
+    color: white;
+    font-weight: bold;
+}
+.f {
+    background-color: #24292D;
+    font-weight: bold;
+    color: white;
+}
+
+
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: #3700b3 radial-gradient(circle, transparent 1%, #bb86fc 1%) center/15000%;
+}
+.ripple:active {
+  background-color: #bb86fc;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.ripple2 {
+    background-position: center;
+    transition: background 0.8s;
+}
+.ripple2:hover {
+    background: #264d8d radial-gradient(circle, transparent 1%, #4081ec 1%) center/15000%;
+}
+.ripple2:active {
+    background-color: #4081ec;
+    background-size: 100%;
+    transition: background 0s;
+  }
+
+.ripple3 {
+    background-position: center;
+    transition: background 0.8s;
+}
+.ripple3:hover {
+    background: #242424 radial-gradient(circle, transparent 1%, #24292D 1%) center/15000%;
+}
+.ripple3:active {
+    background-color: #24292D;
+    background-size: 100%;
+    transition: background 0s;
+  }

@@ -11,12 +11,13 @@ function Home() {
                     <h1 className="header--style"> the Lounge </h1>
                 </div>
                 <div className="buttons--wrapper">
-                    <Link to="/SignUp">
-                        <button class="ripple"> Sign Up </button>
-                    </Link>
                     <Link to="/LogIn">
                         <button class="ripple"> Log In </button>
                     </Link>
+                    <Link to="/SignUp">
+                        <button class="ripple"> Sign Up </button>
+                    </Link>
+
                 </div>
             </div>
             

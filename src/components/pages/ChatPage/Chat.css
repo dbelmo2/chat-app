@@ -92,6 +92,7 @@
 @media screen and (max-width: 100vh) {
     .Chat--wrapper {
         width: 90vw;
+
     }
     .Chat--input-wrapper {
         width: 90vw;

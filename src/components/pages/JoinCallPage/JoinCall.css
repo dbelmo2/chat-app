@@ -1,0 +1,56 @@
+.JoinCall-container {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.JoinCall-wrapper {
+    background-color: #121212;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 95vh;
+    width: 95vw;
+}
+.JoinCall-form--wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50vh;
+}
+.JoinCall-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.JoinCall-input {
+    height: 4.5vh;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-style: none;
+}
+.JoinCall-header {
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: 'Caveat', cursive;
+}
+
+
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+  }
+  .ripple:hover {
+    background: #3700b3 radial-gradient(circle, transparent 1%, #bb86fc 1%) center/15000%;
+  }
+  .ripple:active {
+    background-color: #bb86fc;
+    background-size: 100%;
+    transition: background 0s;
+  }

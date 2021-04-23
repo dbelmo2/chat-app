@@ -5,6 +5,9 @@ import SignUp from './components/pages/SignUpPage/SignUp';
 import LogIn from './components/pages/LoginPage/LogIn';
 import Home from './components/pages/HomePage/Home';
 import Chat from './components/pages/ChatPage/Chat';
+import CallMenu from './components/pages/CallMenuPage/CallMenu';
+import JoinCall from './components/pages/JoinCallPage/JoinCall';
+import VideoCall from './components/pages/VideoCallPage/VideoCall';
 import { auth } from './services/firebase';
 import {useEffect, useState} from 'react';
 
@@ -25,7 +28,7 @@ function PublicRoute({ component: Component, authenticated, ...rest }) {
       {...rest}
       render={(props) => authenticated === false
         ? <Component {...props} />
-        : <Redirect to='/Chat' />}
+        : <Redirect to='/CallMenu' />}
     />
   )
 }
@@ -60,6 +63,10 @@ function App() {
         <PublicRoute authenticated={authenticated} path='/LogIn' component={LogIn} />
         <PublicRoute authenticated={authenticated} path='/SignUp' component={SignUp} />
         <PrivateRoute authenticated={authenticated} path='/Chat' component={Chat} />
+        <PrivateRoute authenticated={authenticated} path='/CallMenu' component={CallMenu} />
+        <PrivateRoute authenticated={authenticated} path="/JoinCall" component={JoinCall} />
+        <PrivateRoute authenticated={authenticated} path="/VideoCall" component={VideoCall} />
+
       </Switch>
     </Router>
   );

@@ -1,0 +1,54 @@
+.CallMenu-container {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.CallMenu-wrapper {
+    background-color: #121212;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 95vh;
+    width: 95vw;
+
+}
+.CallMenu-button {
+    background-color: #bb86fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 150px;
+    height: 150px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 20px;
+    background-position: center;
+    transition: background 0.8s;
+}
+
+  .CallMenu-button:hover {
+    background: #3700b3 radial-gradient(circle, transparent 1%, #bb86fc 1%) center/15000%;
+  }
+  .CallMenu-button:active {
+    background-color: #bb86fc;
+    background-size: 100%;
+    transition: background 0s;
+  }
+.CallMenu-button--wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.CallMenu-button--label {
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+
+}

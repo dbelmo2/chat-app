@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { auth } from "../../../services/firebase";
 import { db } from "../../../services/firebase";
 import { signOut } from '../../../helpers/auth';
@@ -9,6 +9,7 @@ import { FaPaperPlane, FaSignOutAlt } from 'react-icons/fa'
 
 
 function Chat() {
+    /*
     async function signOutHandler() {
         try {
             await signOut();
@@ -16,6 +17,7 @@ function Chat() {
                 console.log("sign out failed");
           }
     }
+    */
 
 
     const [user, setUser] = useState(auth().currentUser);
@@ -88,7 +90,7 @@ function Chat() {
             console.log(error);
             setReadError(error.message);
         }
-      }, []);
+      }, [user.id, userName]);
 
     return (
         <div className="Chat--container">

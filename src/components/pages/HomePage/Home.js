@@ -8,7 +8,7 @@ function Home() {
         <div className="home--container">
             <div className="home--wrapper">
                 <div className="header--wrapper">
-                    <h1 className="header--style"> the Lounge </h1>
+                    <h1 className="header--style"> the Loungeee </h1>
                 </div>
                 <div className="buttons--wrapper">
                     <Link to="/LogIn">

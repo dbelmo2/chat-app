@@ -10,6 +10,8 @@ import JoinCall from './components/pages/JoinCallPage/JoinCall';
 import VideoCall from './components/pages/VideoCallPage/VideoCall';
 import { auth } from './services/firebase';
 import {useEffect, useState} from 'react';
+import {SocketContext, socket} from './context/socket';
+
 
 function PrivateRoute({ component: Component, authenticated, ...rest }) {
   return (
@@ -57,6 +59,7 @@ function App() {
 
   
   return (
+    <SocketContext.Provider value={socket}>
     <Router>
       <Switch>
         <Route path='/chat-app/' exact component={Home} />
@@ -65,10 +68,11 @@ function App() {
         <PrivateRoute authenticated={authenticated} path='/Chat' component={Chat} />
         <PrivateRoute authenticated={authenticated} path='/CallMenu' component={CallMenu} />
         <PrivateRoute authenticated={authenticated} path="/JoinCall" component={JoinCall} />
-        <PrivateRoute authenticated={authenticated} path="/VideoCall" component={VideoCall} />
+        <PrivateRoute authenticated={authenticated} path="/VideoCall:PeerType" component={VideoCall} />
 
       </Switch>
     </Router>
+    </SocketContext.Provider>
   );
 }
 

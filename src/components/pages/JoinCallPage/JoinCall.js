@@ -1,11 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
+import { Redirect } from 'react-router-dom';
 import "./JoinCall.css"
+import {SocketContext} from '../../../context/socket';
 
 function JoinCall() {
+    const socket = useContext(SocketContext);
+    let onFormSubmit = (e) => {
+        e.preventDefault();
+        let inputEl = document.getElementById("key-input");
+        socket.emit("sessKey-submit", inputEl.value);
+        inputEl.value = "";
+        
+    }
+    const [sessFound, setSessFound] = useState(false);
 
-    let onFormSubmit = () => {}
-    const [key, setKey] = useState("");
+    useEffect(() => {
+        socket.on("no-matching-sess", () => {
+            console.log("No matching session found");
+        });
+        socket.on("matching-sess", () => {
+            setSessFound(true);
+        });
+    }, []);
 
+    if(sessFound) {
+        console.log("in sessFound, redirecting to VideoCall:guest");
+        return <Redirect to='/VideoCall:guest'/>;
+        
+    }
 
     return (
         <div className="JoinCall-container">

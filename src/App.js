@@ -62,7 +62,7 @@ function App() {
     <SocketContext.Provider value={socket}>
     <Router>
       <Switch>
-        <Route path='/chat-app/' exact component={Home} />
+        <Route path='/' exact component={Home} />
         <PublicRoute authenticated={authenticated} path='/LogIn' component={LogIn} />
         <PublicRoute authenticated={authenticated} path='/SignUp' component={SignUp} />
         <PrivateRoute authenticated={authenticated} path='/Chat' component={Chat} />

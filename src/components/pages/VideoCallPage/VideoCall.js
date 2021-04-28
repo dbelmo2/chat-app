@@ -86,12 +86,15 @@ function VideoCall() {
             console.log("received sessKey: " + data);
         });
        
-
-        navigator.mediaDevices.getUserMedia({
-            video: true,
-            audio: true
-            
-        }).then(gotMedia).catch(() => {});
+        try {
+            navigator.mediaDevices.getUserMedia({
+                video: true,
+                audio: true
+                
+            }).then(gotMedia).catch(() => {});
+        } catch(error) {
+            console.error(error);
+        }
 
     }, []);
 
